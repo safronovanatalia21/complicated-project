@@ -50,3 +50,13 @@ var days = [
 
 let langChoice = lang == eng ? days[(1, 0)] : days[(0, 0)];
 console.log(langChoice);
+
+let namePerson = prompt("Введите имя: ");
+
+let answer = namePerson == "Александр" ? "Преподаватель" : "Артем или студент";
+console.log(answer);
+
+namePerson = prompt("Введите любое имя, кроме Александр: ");
+
+answer = namePerson == "Артем" ? "ПДиректор" : "студент";
+console.log(answer);
