@@ -1,26 +1,5 @@
-"use strict";
-var num = 266219;
-var numReorginized = num.toString();
-var multiply = 1;
-
-for (var index = 0; index < numReorginized.length; index++) {
-    multiply = multiply * numReorginized[index];
-}
-console.log(multiply);
-
-var multiplyPowed = multiply ** 3;
-console.log("multiplyPowed", multiplyPowed);
-
-var result = multiplyPowed.toString();
-console.log(result.substr(0, 2));
-
 let eng = "en";
 let rus = "ru";
-
-let weekDaysInEnglish =
-    "Sunday, Monday, Tuesday, Wednesday, Thirsday, Friday, Saturday";
-let weekDaysInRussian =
-    "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье";
 
 let lang = prompt("Выберите язык для вывода названий дней недели (en/ru)");
 
@@ -43,20 +22,18 @@ switch (lang) {
         console.log("Ошибка вввода, повторите попытку");
 }
 
-var days = [
-    [weekDaysInRussian],
-    [weekDaysInEnglish]
-];
+let days = [];
+days["ru"] = ["Пн", "Вт", "СР", "Чт", "Пт", "Сб", "Вс"];
+days["en"] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-let langChoice = lang == eng ? days[(1, 0)] : days[(0, 0)];
-console.log(langChoice);
+console.log(days[lang]);
 
 let namePerson = prompt("Введите имя: ");
 
-let answer = namePerson == "Александр" ? "Преподаватель" : "Артем или студент";
-console.log(answer);
-
-namePerson = prompt("Введите любое имя, кроме Александр: ");
-
-answer = namePerson == "Артем" ? "ПДиректор" : "студент";
+let answer =
+    namePerson == "Александр" ?
+    "Преподаватель" :
+    "Артем" ?
+    "Директор" :
+    "студент";
 console.log(answer);
